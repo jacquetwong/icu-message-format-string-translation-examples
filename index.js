@@ -19,33 +19,33 @@ const translations = glob.sync('./resources/*.json')
         return collection;
     }, {});
 
-const enUsLocale = 'en-US';
-const zhHantHkLocale = 'zh-Hant-HK';
+const englishLocale = 'en-US';
+const chineseLocale = 'zh-Hant-HK';
 
 // Substitution example
-const helloEnglish = new IntlMessageFormat(translations[enUsLocale].app.hello, enUsLocale);
-const helloChinese = new IntlMessageFormat(translations[zhHantHkLocale].app.hello, zhHantHkLocale);
+const helloEnglish = new IntlMessageFormat(translations[englishLocale].example_hello, englishLocale);
+const helloChinese = new IntlMessageFormat(translations[chineseLocale].example_hello, chineseLocale);
 console.log(helloEnglish.format({name: "Peter"}));
 console.log(helloChinese.format({name: "Peter"}));
 
 // Plural example
-const bookEnglish = new IntlMessageFormat(translations[enUsLocale].app.book, enUsLocale);
-const bookChinese = new IntlMessageFormat(translations[zhHantHkLocale].app.book, zhHantHkLocale);
+const bookEnglish = new IntlMessageFormat(translations[englishLocale].example_book, englishLocale);
+const bookChinese = new IntlMessageFormat(translations[chineseLocale].example_book, chineseLocale);
 console.log(bookEnglish.format({count: 0}));
 console.log(bookEnglish.format({count: 1}));
 console.log(bookChinese.format({count: 7000}));
 
 // Gender with plural and substitution example
-const sheepEnglish = new IntlMessageFormat(translations[enUsLocale].app.sheep, enUsLocale);
+const sheepEnglish = new IntlMessageFormat(translations[englishLocale].example_sheep, englishLocale);
 console.log(sheepEnglish.format({gender: "female", name: "Mary", count: 1234}));
 console.log(sheepEnglish.format({gender: "male", name: "Peter", count: 0}));
 
 // Date example
-const dateEnglish = new IntlMessageFormat(translations[enUsLocale].app.date, enUsLocale);
-const dateChinese = new IntlMessageFormat(translations[zhHantHkLocale].app.date, zhHantHkLocale);
+const dateEnglish = new IntlMessageFormat(translations[englishLocale].example_date, englishLocale);
+const dateChinese = new IntlMessageFormat(translations[chineseLocale].example_date, chineseLocale);
 console.log(dateEnglish.format({date: new Date()}));
 console.log(dateChinese.format({date: new Date()}));
 
 // Number example
-const numberEnglish = new IntlMessageFormat(translations[enUsLocale].app.number, enUsLocale);
+const numberEnglish = new IntlMessageFormat(translations[englishLocale].example_number, englishLocale);
 console.log(numberEnglish.format({count: 1000000}));
