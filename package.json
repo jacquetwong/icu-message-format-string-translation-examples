@@ -1,0 +1,10 @@
+{
+  "name": "icu-message-format-string-translation-examples",
+  "version": "0.0.1",
+  "description": "Examples of reading translations from json string files",
+  "dependencies": {
+    "intl": "*",
+    "intl-messageformat": "*",
+    "glob": "*"
+  }
+}
