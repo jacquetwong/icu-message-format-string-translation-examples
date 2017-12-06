@@ -1,7 +1,9 @@
 {
-  "example_hello": "Hi, {name}!",
-  "example_book": "You have {count, plural, =0 {no books.} =1 {a book.} other {# books.}}",
-  "example_sheep": "{ gender, select, female {{count, plural, =0 {{name} and her friend have no sheeps.} one {{name} and her friend have a sheep.} other {{name} and her friend have # sheeps.}}} male {{count, plural, =0 {{name} and his friend have no sheeps.} one {{name} and his friend have a sheep.} other {{name} and his friend have # sheeps.}}} other {{count, plural, =0 {{name} and their friends have no sheep.} one {{name} and their friends have a sheep.} other {{name} and their friends have # sheeps.}}}}",
-  "example_date": "Today is {date, date, short}",
-  "example_number": "Just a number: {count, number}"
+  "example": {
+    "hello": "Hi, {name}!",
+    "book": "You have {count, plural, =0 {no books.} =1 {a book.} other {# books.}}",
+    "sheep": "{ gender, select, female {{count, plural, =0 {{name} and her friend have no sheeps.} one {{name} and her friend have a sheep.} other {{name} and her friend have # sheeps.}}} male {{count, plural, =0 {{name} and his friend have no sheeps.} one {{name} and his friend have a sheep.} other {{name} and his friend have # sheeps.}}} other {{count, plural, =0 {{name} and their friends have no sheep.} one {{name} and their friends have a sheep.} other {{name} and their friends have # sheeps.}}}}",
+    "date": "Today is {date, date, short}",
+    "number": "Just a number: {count, number}"
+  }
 }
