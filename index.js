@@ -46,6 +46,10 @@ const dateChinese = new IntlMessageFormat(translations[chineseLocale].example.da
 console.log(dateEnglish.format({date: new Date()}));
 console.log(dateChinese.format({date: new Date()}));
 
-// Number example
-const numberEnglish = new IntlMessageFormat(translations[englishLocale].example.number, englishLocale);
-console.log(numberEnglish.format({count: 1000000}));
+// Price example
+const priceEnglish = new IntlMessageFormat(translations[englishLocale].example.price, englishLocale);
+const priceChinese = new IntlMessageFormat(translations[chineseLocale].example.price, chineseLocale);
+const currencyEnglish = new Intl.NumberFormat(undefined, {style:'currency', currency:translations[englishLocale].example.currency});
+const currencyChinese = new Intl.NumberFormat(undefined, {style:'currency', currency:translations[chineseLocale].example.currency});
+console.log(priceEnglish.format({price: currencyEnglish.format(1000)}));
+console.log(priceChinese.format({price: currencyChinese.format(1000)}));
